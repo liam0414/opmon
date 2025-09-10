@@ -1,0 +1,300 @@
+{
+  "characters": {
+    "luffy": {
+      "id": "luffy",
+      "name": "Monkey D. Luffy",
+      "title": "Straw Hat",
+      "type": 0,
+      "bounty": 3000000000,
+      "baseStats": {
+        "0": 100,
+        "1": 1500,
+        "2": 85,
+        "3": 75,
+        "4": 90,
+        "5": 80,
+        "6": 95,
+        "7": 100,
+        "8": 0
+      },
+      "devilFruit": {
+        "name": "Gomu Gomu no Mi",
+        "type": 1,
+        "description": "Allows the user's body to stretch like rubber, making them virtually immune to blunt attacks.",
+        "masteryLevel": 8,
+        "awakened": true,
+        "abilities": [
+          {
+            "name": "Gomu Gomu no Pistol",
+            "description": "Stretches arm backward and punches forward with tremendous force",
+            "powerCost": 15,
+            "baseDamage": 120,
+            "cooldown": 2.0,
+            "levelRequirement": 1
+          },
+          {
+            "name": "Gomu Gomu no Gatling",
+            "description": "Rapid-fire punches that create afterimages",
+            "powerCost": 35,
+            "baseDamage": 200,
+            "cooldown": 8.0,
+            "levelRequirement": 10
+          },
+          {
+            "name": "Gear Second",
+            "description": "Pumps blood faster, increasing speed and power dramatically",
+            "powerCost": 50,
+            "baseDamage": 0,
+            "cooldown": 30.0,
+            "levelRequirement": 20
+          },
+          {
+            "name": "Gear Third",
+            "description": "Inflates body parts to giant size for devastating attacks",
+            "powerCost": 75,
+            "baseDamage": 400,
+            "cooldown": 45.0,
+            "levelRequirement": 35
+          },
+          {
+            "name": "Gear Fourth: Boundman",
+            "description": "Transformation that grants incredible power and mobility",
+            "powerCost": 100,
+            "baseDamage": 600,
+            "cooldown": 120.0,
+            "levelRequirement": 50
+          }
+        ]
+      },
+      "recruitmentMethod": "story",
+      "isRecruited": true,
+      "role": "Captain",
+      "joinLocation": "fushia_village"
+    },
+    "zoro": {
+      "id": "zoro",
+      "name": "Roronoa Zoro",
+      "title": "Pirate Hunter",
+      "type": 1,
+      "bounty": 1111000000,
+      "baseStats": {
+        "0": 95,
+        "1": 1400,
+        "2": 95,
+        "3": 85,
+        "4": 70,
+        "5": 90,
+        "6": 80,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "recruitmentMethod": "quest",
+      "isRecruited": false,
+      "role": "Swordsman",
+      "joinLocation": "shells_town",
+      "recruitmentRequirements": [
+        {
+          "type": "defeat",
+          "target": "captain_morgan",
+          "completed": false
+        },
+        {
+          "type": "complete_quest",
+          "target": "recruit_zoro",
+          "completed": false
+        }
+      ]
+    },
+    "nami": {
+      "id": "nami",
+      "name": "Nami",
+      "title": "Cat Burglar",
+      "type": 1,
+      "bounty": 366000000,
+      "baseStats": {
+        "0": 80,
+        "1": 1100,
+        "2": 45,
+        "3": 60,
+        "4": 95,
+        "5": 55,
+        "6": 85,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "recruitmentMethod": "quest",
+      "isRecruited": false,
+      "role": "Navigator",
+      "joinLocation": "cocoyasi_village",
+      "recruitmentRequirements": [
+        {
+          "type": "defeat",
+          "target": "arlong",
+          "completed": false
+        },
+        {
+          "type": "complete_quest",
+          "target": "save_cocoyasi_village",
+          "completed": false
+        }
+      ]
+    },
+    "sanji": {
+      "id": "sanji",
+      "name": "Vinsmoke Sanji",
+      "title": "Black Leg",
+      "type": 1,
+      "bounty": 1032000000,
+      "baseStats": {
+        "0": 90,
+        "1": 1200,
+        "2": 90,
+        "3": 75,
+        "4": 85,
+        "5": 80,
+        "6": 90,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "recruitmentMethod": "quest",
+      "isRecruited": false,
+      "role": "Cook",
+      "joinLocation": "baratie"
+    },
+    "usopp": {
+      "id": "usopp",
+      "name": "Usopp",
+      "title": "God Usopp",
+      "type": 1,
+      "bounty": 500000000,
+      "baseStats": {
+        "0": 75,
+        "1": 900,
+        "2": 35,
+        "3": 40,
+        "4": 95,
+        "5": 45,
+        "6": 85,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "recruitmentMethod": "story",
+      "isRecruited": false,
+      "role": "Sniper",
+      "joinLocation": "syrup_village"
+    },
+    "chopper": {
+      "id": "chopper",
+      "name": "Tony Tony Chopper",
+      "title": "Cotton Candy Lover",
+      "type": 1,
+      "bounty": 1000,
+      "baseStats": {
+        "0": 70,
+        "1": 800,
+        "2": 65,
+        "3": 95,
+        "4": 80,
+        "5": 70,
+        "6": 90,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": {
+        "name": "Hito Hito no Mi",
+        "type": 2,
+        "description": "Allows the user to transform into a human and human-hybrid forms",
+        "masteryLevel": 6,
+        "awakened": false
+      },
+      "recruitmentMethod": "quest",
+      "isRecruited": false,
+      "role": "Doctor",
+      "joinLocation": "drum_island"
+    }
+  },
+  "enemies": {
+    "marine_soldier": {
+      "id": "marine_soldier",
+      "name": "Marine Soldier",
+      "title": "",
+      "type": 2,
+      "bounty": 0,
+      "baseStats": {
+        "0": 25,
+        "1": 400,
+        "2": 35,
+        "3": 30,
+        "4": 40,
+        "5": 35,
+        "6": 25,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "dropTable": {
+        "berry": [50, 150],
+        "items": [
+          {"id": "marine_rifle", "chance": 0.1},
+          {"id": "health_potion", "chance": 0.3}
+        ]
+      }
+    },
+    "captain_morgan": {
+      "id": "captain_morgan",
+      "name": "Captain Morgan",
+      "title": "Axe-Hand",
+      "type": 2,
+      "bounty": 0,
+      "baseStats": {
+        "0": 35,
+        "1": 800,
+        "2": 55,
+        "3": 45,
+        "4": 30,
+        "5": 50,
+        "6": 40,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "dropTable": {
+        "berry": [1000, 2000],
+        "items": [
+          {"id": "marine_coat", "chance": 1.0},
+          {"id": "captain_axe", "chance": 0.8}
+        ]
+      }
+    },
+    "arlong": {
+      "id": "arlong",
+      "name": "Arlong",
+      "title": "Saw-Tooth",
+      "type": 2,
+      "bounty": 20000000,
+      "baseStats": {
+        "0": 45,
+        "1": 1200,
+        "2": 75,
+        "3": 60,
+        "4": 55,
+        "5": 70,
+        "6": 50,
+        "7": 0,
+        "8": 0
+      },
+      "devilFruit": null,
+      "dropTable": {
+        "berry": [5000, 10000],
+        "items": [
+          {"id": "saw_tooth_blade", "chance": 0.7},
+          {"id": "fishman_strength_serum", "chance": 0.3}
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "locations": {
+    "fushia_village": {
+      "id": "fushia_village",
+      "name": "Fushia Village",
+      "description": "A peaceful village in the East Blue where Luffy grew up. The place where dreams of piracy began.",
+      "region": "East Blue",
+      "type": "village",
+      "unlocked": true,
+      "connectedLocations": ["windmill_village", "shells_town"],
+      "backgroundTexture": "assets/textures/locations/fushia_village.png",
+      "musicTrack": "peaceful_village",
+      "weatherTypes": ["clear", "rainy"],
+      "npcs": [
+        {
+          "id": "mayor_woop_slap",
+          "name": "Mayor Woop Slap",
+          "position": [400, 300],
+          "dialogue": "Luffy! You've grown so much since you left the village!"
+        },
+        {
+          "id": "makino",
+          "name": "Makino",
+          "position": [600, 250],
+          "dialogue": "Welcome back! Would you like something to eat?"
+        }
+      ],
+      "shops": [
+        {
+          "id": "village_general_store",
+          "name": "Village General Store",
+          "keeper": "Village Shopkeeper",
+          "position": [300, 400],
+          "inventory": ["health_potion", "energy_drink", "basic_sword"]
+        }
+      ],
+      "randomEncounters": [
+        {
+          "enemyGroups": [["mountain_bandit"], ["sea_king_small"]],
+          "encounterRate": 0.1
+        }
+      ]
+    },
+    "shells_town": {
+      "id": "shells_town",
+      "name": "Shells Town",
+      "description": "A town under Marine control, famous for its Marine base where Roronoa Zoro was imprisoned.",
+      "region": "East Blue",
+      "type": "town",
+      "unlocked": false,
+      "connectedLocations": ["fushia_village", "orange_town"],
+      "backgroundTexture": "assets/textures/locations/shells_town.png",
+      "musicTrack": "marine_town",
+      "weatherTypes": ["clear", "cloudy"],
+      "npcs": [
+        {
+          "id": "rika",
+          "name": "Rika",
+          "position": [200, 350],
+          "dialogue": "That Zoro guy... he's not as bad as everyone says!"
+        },
+        {
+          "id": "marine_captain",
+          "name": "Marine Captain",
+          "position": [500, 200],
+          "dialogue": "Justice will always prevail!"
+        }
+      ],
+      "shops": [
+        {
+          "id": "shells_town_weapons",
+          "name": "Marine Surplus Store",
+          "keeper": "Weapons Dealer",
+          "position": [400, 300],
+          "inventory": ["katana", "marine_rifle", "leather_armor"]
+        }
+      ],
+      "specialAreas": [
+        {
+          "id": "marine_base",
+          "name": "Marine Base",
+          "position": [600, 100],
+          "description": "The imposing Marine base where Zoro is imprisoned",
+          "requiredQuest": "recruit_zoro"
+        }
+      ],
+      "randomEncounters": [
+        {
+          "enemyGroups": [["marine_soldier"], ["marine_soldier", "marine_soldier"]],
+          "encounterRate": 0.15
+        }
+      ]
+    },
+    "orange_town": {
+      "id": "orange_town",
+      "name": "Orange Town",
+      "description": "Once a prosperous town, now terrorized by the pirate Buggy and his crew.",
+      "region": "East Blue",
+      "type": "town",
+      "unlocked": false,
+      "connectedLocations": ["shells_town", "syrup_village"],
+      "backgroundTexture": "assets/textures/locations/orange_town.png",
+      "musicTrack": "abandoned_town",
+      "weatherTypes": ["clear", "windy"],
+      "npcs": [
+        {
+          "id": "boodle",
+          "name": "Boodle",
+          "position": [350, 300],
+          "dialogue": "This town... it used to be so beautiful before that clown came."
+        }
+      ],
+      "bosses": [
+        {
+          "id": "buggy",
+          "name": "Buggy the Clown",
+          "position": [500, 200],
+          "bounty": 15000000,
+          "questRequired": "defeat_buggy"
+        }
+      ]
+    },
+    "syrup_village": {
+      "id": "syrup_village",
+      "name": "Syrup Village",
+      "description": "A quiet village where Usopp lives, known for its peaceful atmosphere and Usopp's tall tales.",
+      "region": "East Blue",
+      "type": "village",
+      "unlocked": false,
+      "connectedLocations": ["orange_town", "baratie"],
+      "backgroundTexture": "assets/textures/locations/syrup_village.png",
+      "musicTrack": "peaceful_village",
+      "weatherTypes": ["clear", "foggy"],
+      "npcs": [
+        {
+          "id": "kaya",
+          "name": "Kaya",
+          "position": [300, 250],
+          "dialogue": "Usopp tells the most amazing stories!"
+        },
+        {
+          "id": "merry",
+          "name": "Merry",
+          "position": [450, 300],
+          "dialogue": "Miss Kaya's health has been improving thanks to Usopp's visits."
+        }
+      ],
+      "specialAreas": [
+        {
+          "id": "kayas_mansion",
+          "name": "Kaya's Mansion",
+          "position": [600, 150],
+          "description": "The grand mansion where Kaya lives"
+        }
+      ]
+    },
+    "baratie": {
+      "id": "baratie",
+      "name": "Baratie",
+      "description": "A floating restaurant ship in the East Blue, famous for its excellent food and fighting cooks.",
+      "region": "East Blue",
+      "type": "restaurant_ship",
+      "unlocked": false,
+      "connectedLocations": ["syrup_village", "cocoyasi_village"],
+      "backgroundTexture": "assets/textures/locations/baratie.png",
+      "musicTrack": "restaurant_theme",
+      "weatherTypes": ["clear", "stormy"],
+      "npcs": [
+        {
+          "id": "zeff",
+          "name": "Red-Leg Zeff",
+          "position": [400, 200],
+          "dialogue": "Welcome to the Baratie! We serve the finest food on the seas!"
+        },
+        {
+          "id": "patty",
+          "name": "Patty",
+          "position": [300, 350],
+          "dialogue": "No fighting in the restaurant!"
+        }
+      ],
+      "shops": [
+        {
+          "id": "baratie_kitchen",
+          "name": "Baratie Restaurant",
+          "keeper": "Chef",
+          "position": [500, 300],
+          "inventory": ["seafood_curry", "meat_special", "energy_drink"]
+        }
+      ]
+    },
+    "cocoyasi_village": {
+      "id": "cocoyasi_village",
+      "name": "Cocoyasi Village",
+      "description": "Nami's hometown, currently under the tyrannical rule of the Fishman Arlong.",
+      "region": "East Blue",
+      "type": "village",
+      "unlocked": false,
+      "connectedLocations": ["baratie", "loguetown"],
+      "backgroundTexture": "assets/textures/locations/cocoyasi_village.png",
+      "musicTrack": "oppressed_village",
+      "weatherTypes": ["clear", "rainy", "stormy"],
+      "npcs": [
+        {
+          "id": "bell_mere",
+          "name": "Bell-mère",
+          "position": [350, 300],
+          "dialogue": "Nami... please be safe...",
+          "isSpirit": true
+        },
+        {
+          "id": "genzo",
+          "name": "Genzo",
+          "position": [250, 350],
+          "dialogue": "We must free this village from Arlong's control!"
+        }
+      ],
+      "specialAreas": [
+        {
+          "id": "arlong_park",
+          "name": "Arlong Park",
+          "position": [600, 100],
+          "description": "Arlong's fortress and headquarters",
+          "requiredQuest": "defeat_arlong"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "arlong",
+          "name": "Arlong",
+          "position": [600, 150],
+          "bounty": 20000000
+        }
+      ]
+    },
+    "loguetown": {
+      "id": "loguetown",
+      "name": "Loguetown",
+      "description": "The town where the Pirate King Gol D. Roger was born and executed. The beginning and end of the Great Pirate Era.",
+      "region": "East Blue",
+      "type": "town",
+      "unlocked": false,
+      "connectedLocations": ["cocoyasi_village", "reverse_mountain"],
+      "backgroundTexture": "assets/textures/locations/loguetown.png",
+      "musicTrack": "historic_town",
+      "weatherTypes": ["clear", "stormy", "foggy"],
+      "npcs": [
+        {
+          "id": "smoker",
+          "name": "Smoker",
+          "position": [500, 200],
+          "dialogue": "I won't let any pirate escape from Loguetown!",
+          "isBoss": true
+        }
+      ],
+      "shops": [
+        {
+          "id": "weapon_shop",
+          "name": "Loguetown Weapons",
+          "keeper": "Ipponmatsu",
+          "position": [300, 300],
+          "inventory": ["sandai_kitetsu", "yubashiri", "quality_katana"]
+        }
+      ],
+      "specialAreas": [
+        {
+          "id": "execution_platform",
+          "name": "Execution Platform",
+          "position": [400, 150],
+          "description": "Where Gol D. Roger was executed, marking the beginning of the Great Pirate Era"
+        }
+      ]
+    },
+    "reverse_mountain": {
+      "id": "reverse_mountain",
+      "name": "Reverse Mountain",
+      "description": "The entrance to the Grand Line. A mysterious mountain where the ocean flows upward.",
+      "region": "Red Line",
+      "type": "mountain",
+      "unlocked": false,
+      "connectedLocations": ["loguetown", "whisky_peak"],
+      "backgroundTexture": "assets/textures/locations/reverse_mountain.png",
+      "musicTrack": "grand_line_entrance",
+      "weatherTypes": ["stormy", "clear"],
+      "specialAreas": [
+        {
+          "id": "twin_capes",
+          "name": "Twin Capes",
+          "position": [400, 300],
+          "description": "The lighthouse at the entrance to the Grand Line"
+        }
+      ],
+      "npcs": [
+        {
+          "id": "crocus",
+          "name": "Crocus",
+          "position": [300, 350],
+          "dialogue": "Welcome to the Grand Line! This is where your real adventure begins!"
+        }
+      ]
+    },
+    "whisky_peak": {
+      "id": "whisky_peak",
+      "name": "Whisky Peak",
+      "description": "The first island in the Grand Line, home to bounty hunters disguised as welcoming townspeople.",
+      "region": "Paradise",
+      "type": "island",
+      "unlocked": false,
+      "connectedLocations": ["reverse_mountain", "little_garden"],
+      "backgroundTexture": "assets/textures/locations/whisky_peak.png",
+      "musicTrack": "bounty_hunter_town",
+      "weatherTypes": ["clear", "windy"],
+      "npcs": [
+        {
+          "id": "mr_8",
+          "name": "Mr. 8",
+          "position": [400, 250],
+          "dialogue": "Welcome to our town! Let's celebrate your arrival!"
+        }
+      ]
+    }
+  },
+  "regions": {
+    "east_blue": {
+      "name": "East Blue",
+      "description": "The weakest of the four seas, but the birthplace of many legendary pirates.",
+      "color": "#4A90E2"
+    },
+    "grand_line_paradise": {
+      "name": "Grand Line - Paradise",
+      "description": "The first half of the Grand Line, known for its unpredictable weather and dangerous pirates.",
+      "color": "#E24A4A"
+    },
+    "grand_line_new_world": {
+      "name": "Grand Line - New World",
+      "description": "The second half of the Grand Line, where only the strongest pirates can survive.",
+      "color": "#9B4AE2"
+    }
+  }
+}

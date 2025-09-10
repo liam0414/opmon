@@ -1,0 +1,576 @@
+{
+  "dialogues": {
+    "luffy": {
+      "default": [
+        {
+          "text": "I'm gonna be King of the Pirates!",
+          "emotion": "determined",
+          "conditions": {}
+        },
+        {
+          "text": "Meat! I want meat!",
+          "emotion": "excited",
+          "conditions": {"flag": "hungry"}
+        },
+        {
+          "text": "My crew is the best crew in the world!",
+          "emotion": "proud",
+          "conditions": {"crew_size": ">2"}
+        }
+      ],
+      "first_meeting": [
+        {
+          "text": "Hey! Want to join my pirate crew?",
+          "emotion": "cheerful",
+          "responses": [
+            {
+              "text": "Sure! That sounds awesome!",
+              "action": "join_crew",
+              "flag": "crew_member_recruited"
+            },
+            {
+              "text": "A pirate crew? That's crazy!",
+              "action": "none",
+              "next": "explain_dream"
+            },
+            {
+              "text": "I'm not interested.",
+              "action": "end_conversation"
+            }
+          ]
+        }
+      ],
+      "explain_dream": [
+        {
+          "text": "I'm going to find the One Piece and become the Pirate King! It's my dream!",
+          "emotion": "passionate",
+          "responses": [
+            {
+              "text": "That's an incredible dream! Count me in!",
+              "action": "join_crew",
+              "flag": "crew_member_recruited"
+            },
+            {
+              "text": "That's impossible! The One Piece is just a legend!",
+              "next": "never_give_up"
+            }
+          ]
+        }
+      ],
+      "never_give_up": [
+        {
+          "text": "It doesn't matter! I'll never give up on my dream! That's what it means to be a pirate!",
+          "emotion": "determined",
+          "responses": [
+            {
+              "text": "...Your determination is inspiring. I'll join you!",
+              "action": "join_crew",
+              "flag": "crew_member_recruited"
+            },
+            {
+              "text": "You're crazy, but... good luck with that.",
+              "action": "end_conversation"
+            }
+          ]
+        }
+      ],
+      "battle_start": [
+        {
+          "text": "I won't let you hurt my friends!",
+          "emotion": "angry"
+        },
+        {
+          "text": "Gomu Gomu no... let's do this!",
+          "emotion": "battle_ready"
+        }
+      ]
+    },
+    "zoro": {
+      "first_meeting": [
+        {
+          "text": "You want me to join your crew?",
+          "emotion": "suspicious",
+          "responses": [
+            {
+              "text": "Yeah! I need a strong swordsman!",
+              "next": "prove_strength"
+            },
+            {
+              "text": "I'm going to be the Pirate King!",
+              "next": "pirate_king_response"
+            }
+          ]
+        }
+      ],
+      "prove_strength": [
+        {
+          "text": "Hmph. If you're serious about becoming Pirate King, you'll need to prove you're worth following.",
+          "emotion": "challenging",
+          "responses": [
+            {
+              "text": "I'll prove it! Just watch me!",
+              "action": "set_flag",
+              "flag": "zoro_challenge_accepted",
+              "next": "conditions_set"
+            },
+            {
+              "text": "I don't need to prove anything to you.",
+              "next": "stubborn_response"
+            }
+          ]
+        }
+      ],
+      "pirate_king_response": [
+        {
+          "text": "Pirate King, huh? That's a lofty goal. The man who becomes Pirate King's first mate can't be weak.",
+          "emotion": "serious",
+          "responses": [
+            {
+              "text": "Then you'll be the first mate of the Pirate King!",
+              "next": "conditions_set"
+            }
+          ]
+        }
+      ],
+      "conditions_set": [
+        {
+          "text": "Fine. But I have conditions. First, help me get my swords back. Second, if you ever get in the way of my dream to become the world's greatest swordsman, I'll cut you down myself.",
+          "emotion": "serious",
+          "responses": [
+            {
+              "text": "Deal! Your dream is just as important as mine!",
+              "action": "set_quest",
+              "quest": "get_zoro_swords",
+              "flag": "zoro_recruitment_started"
+            }
+          ]
+        }
+      ],
+      "default": [
+        {
+          "text": "I'm going to be the world's greatest swordsman.",
+          "emotion": "determined"
+        },
+        {
+          "text": "Which way is north again?",
+          "emotion": "confused",
+          "conditions": {"location": "any"}
+        },
+        {
+          "text": "A swordsman's strength isn't just in his blade.",
+          "emotion": "wise"
+        }
+      ],
+      "battle_start": [
+        {
+          "text": "Three-sword style... let's end this quickly.",
+          "emotion": "focused"
+        },
+        {
+          "text": "I'll cut through anything that stands in my captain's way!",
+          "emotion": "loyal"
+        }
+      ],
+      "recruited": [
+        {
+          "text": "Captain, what's our next destination?",
+          "emotion": "ready"
+        },
+        {
+          "text": "My swords are always ready to protect this crew.",
+          "emotion": "loyal"
+        }
+      ]
+    },
+    "nami": {
+      "first_meeting": [
+        {
+          "text": "Pirates? I hate pirates!",
+          "emotion": "angry",
+          "conditions": {"flag": "arlong_active"}
+        },
+        {
+          "text": "You don't look like much of a pirate crew...",
+          "emotion": "skeptical"
+        }
+      ],
+      "about_arlong": [
+        {
+          "text": "Arlong... that fishman has made my life hell. But I have to keep working for him to save my village.",
+          "emotion": "pained",
+          "responses": [
+            {
+              "text": "We'll defeat Arlong and free your village!",
+              "next": "hope_response"
+            },
+            {
+              "text": "Why don't you just fight back?",
+              "next": "explain_situation"
+            }
+          ]
+        }
+      ],
+      "hope_response": [
+        {
+          "text": "You... you would really do that? But Arlong is incredibly strong, and he has a whole crew of fishmen!",
+          "emotion": "hopeful_but_scared",
+          "responses": [
+            {
+              "text": "I don't care how strong he is! No one hurts my friends!",
+              "action": "set_quest",
+              "quest": "defeat_arlong",
+              "next": "grateful_response"
+            }
+          ]
+        }
+      ],
+      "grateful_response": [
+        {
+          "text": "...Thank you. If you really can defeat Arlong, then... I'll officially join your crew as your navigator.",
+          "emotion": "grateful",
+          "action": "set_flag",
+          "flag": "nami_promise_given"
+        }
+      ],
+      "default": [
+        {
+          "text": "Money is the best thing in the world!",
+          "emotion": "greedy"
+        },
+        {
+          "text": "The weather is going to change soon. I can feel it.",
+          "emotion": "knowledgeable"
+        },
+        {
+          "text": "You idiots better not damage my ship!",
+          "emotion": "bossy"
+        }
+      ],
+      "recruited": [
+        {
+          "text": "According to my charts, our next destination should be...",
+          "emotion": "professional"
+        },
+        {
+          "text": "Don't even think about borrowing money from me!",
+          "emotion": "stern"
+        }
+      ]
+    },
+    "sanji": {
+      "first_meeting": [
+        {
+          "text": "Welcome to the Baratie! What can I get for you today?",
+          "emotion": "professional",
+          "responses": [
+            {
+              "text": "Just give me lots of meat!",
+              "next": "meat_order"
+            },
+            {
+              "text": "We're pirates looking for a cook!",
+              "next": "pirate_reaction"
+            },
+            {
+              "text": "The strongest dish you have!",
+              "next": "strong_dish"
+            }
+          ]
+        }
+      ],
+      "meat_order": [
+        {
+          "text": "A man who appreciates meat! I like that. Coming right up!",
+          "emotion": "pleased",
+          "action": "give_item",
+          "item": "meat_special"
+        }
+      ],
+      "pirate_reaction": [
+        {
+          "text": "Pirates? Well, as long as you can pay for your meal and don't cause trouble, you're welcome here.",
+          "emotion": "cautious",
+          "responses": [
+            {
+              "text": "We need a cook who can fight too!",
+              "next": "fighting_cook"
+            }
+          ]
+        }
+      ],
+      "fighting_cook": [
+        {
+          "text": "A fighting cook? Hah! You've come to the right place. But I won't join just anyone's crew.",
+          "emotion": "confident",
+          "responses": [
+            {
+              "text": "I'm going to be the Pirate King!",
+              "next": "pirate_king_reaction"
+            },
+            {
+              "text": "We'll prove we're worthy!",
+              "next": "prove_worth"
+            }
+          ]
+        }
+      ],
+      "pirate_king_reaction": [
+        {
+          "text": "Pirate King? That's a hell of a dream. The Pirate King would need a cook worthy of that title...",
+          "emotion": "intrigued"
+        }
+      ],
+      "default": [
+        {
+          "text": "A true chef never wastes food!",
+          "emotion": "passionate"
+        },
+        {
+          "text": "Ladies should always be treated with respect!",
+          "emotion": "chivalrous"
+        },
+        {
+          "text": "My kicks can break through steel!",
+          "emotion": "confident"
+        }
+      ],
+      "recruited": [
+        {
+          "text": "What would you like to eat today, Captain?",
+          "emotion": "respectful"
+        },
+        {
+          "text": "I'll find the All Blue someday, the sea where all fish from every ocean gather!",
+          "emotion": "dreamy"
+        }
+      ],
+      "about_all_blue": [
+        {
+          "text": "The All Blue... it's a legendary sea where fish from all four oceans gather. It's every cook's dream!",
+          "emotion": "passionate",
+          "responses": [
+            {
+              "text": "We'll find it together!",
+              "action": "increase_loyalty",
+              "amount": 10
+            },
+            {
+              "text": "Sounds like just a legend to me.",
+              "action": "decrease_loyalty", 
+              "amount": 5
+            }
+          ]
+        }
+      ]
+    },
+    "usopp": {
+      "first_meeting": [
+        {
+          "text": "I am the great Captain Usopp, leader of 8,000 brave warriors!",
+          "emotion": "boastful",
+          "responses": [
+            {
+              "text": "Wow! 8,000 warriors? That's amazing!",
+              "next": "proud_response"
+            },
+            {
+              "text": "I don't see any warriors around here.",
+              "next": "caught_lying"
+            }
+          ]
+        }
+      ],
+      "proud_response": [
+        {
+          "text": "That's right! I've fought sea kings the size of islands and... wait, you actually believed that?",
+          "emotion": "surprised_then_guilty"
+        }
+      ],
+      "caught_lying": [
+        {
+          "text": "Haha... well, you see... they're all... invisible! Yeah, that's it!",
+          "emotion": "nervous",
+          "responses": [
+            {
+              "text": "It's okay to tell stories, but don't lie to friends.",
+              "next": "friendship_moment"
+            }
+          ]
+        }
+      ],
+      "friendship_moment": [
+        {
+          "text": "Friends? You... you really want to be my friend?",
+          "emotion": "touched",
+          "action": "increase_loyalty",
+          "amount": 15
+        }
+      ],
+      "default": [
+        {
+          "text": "I once fought a goldfish the size of an island!",
+          "emotion": "storytelling"
+        },
+        {
+          "text": "My slingshot never misses its target!",
+          "emotion": "proud"
+        },
+        {
+          "text": "I'm getting a case of can't-go-to-that-island disease!",
+          "emotion": "scared"
+        }
+      ],
+      "battle_start": [
+        {
+          "text": "I... I can't fight! I have a disease that prevents me from fighting!",
+          "emotion": "scared"
+        },
+        {
+          "text": "For my friends... I can be brave!",
+          "emotion": "determined"
+        }
+      ]
+    },
+    "villagers": {
+      "generic_villager": [
+        {
+          "text": "Welcome to our village, traveler!",
+          "emotion": "friendly"
+        },
+        {
+          "text": "These are dangerous times with all the pirates around.",
+          "emotion": "worried"
+        },
+        {
+          "text": "Have you heard the news from the Grand Line?",
+          "emotion": "curious"
+        }
+      ],
+      "shopkeeper": [
+        {
+          "text": "Welcome to my shop! Take a look at my wares!",
+          "emotion": "welcoming"
+        },
+        {
+          "text": "These prices are the best you'll find anywhere!",
+          "emotion": "confident"
+        },
+        {
+          "text": "Come back anytime!",
+          "emotion": "friendly"
+        }
+      ],
+      "worried_citizen": [
+        {
+          "text": "Please help us! Pirates have been terrorizing our town!",
+          "emotion": "desperate"
+        },
+        {
+          "text": "You look strong... can you protect us?",
+          "emotion": "hopeful"
+        }
+      ]
+    },
+    "enemies": {
+      "marine_soldier": [
+        {
+          "text": "Halt! You're under arrest in the name of justice!",
+          "emotion": "authoritative"
+        },
+        {
+          "text": "Pirates will not be tolerated!",
+          "emotion": "stern"
+        }
+      ],
+      "generic_pirate": [
+        {
+          "text": "Hand over your treasure or face my blade!",
+          "emotion": "threatening"
+        },
+        {
+          "text": "You picked the wrong ship to mess with!",
+          "emotion": "confident"
+        }
+      ],
+      "captain_morgan": [
+        {
+          "text": "I am Captain Morgan! My word is absolute law!",
+          "emotion": "arrogant"
+        },
+        {
+          "text": "Kneel before my axe-hand!",
+          "emotion": "commanding"
+        }
+      ],
+      "arlong": [
+        {
+          "text": "Inferior humans! Know your place beneath the fishman race!",
+          "emotion": "superiority"
+        },
+        {
+          "text": "This village belongs to me! Pay your tribute!",
+          "emotion": "threatening"
+        }
+      ]
+    }
+  },
+  "dialogue_conditions": {
+    "flag_checks": [
+      "crew_member_recruited",
+      "quest_completed",
+      "location_visited",
+      "item_obtained",
+      "battle_won"
+    ],
+    "stat_checks": [
+      "level",
+      "bounty",
+      "crew_size",
+      "berry_amount"
+    ],
+    "location_checks": [
+      "current_location",
+      "visited_locations"
+    ],
+    "time_checks": [
+      "game_time",
+      "day_night",
+      "weather"
+    ]
+  },
+  "dialogue_effects": {
+    "set_flag": "Sets a game flag to true/false",
+    "give_item": "Adds item to player inventory", 
+    "start_quest": "Begins a new quest",
+    "complete_quest": "Marks a quest as complete",
+    "change_reputation": "Modifies faction reputation",
+    "trigger_battle": "Starts a battle encounter",
+    "change_location": "Moves player to new location",
+    "modify_stats": "Changes character statistics",
+    "play_sound": "Plays audio effect",
+    "show_cutscene": "Triggers cutscene sequence"
+  },
+  "conversation_trees": {
+    "recruitment_template": {
+      "intro": "character_introduction",
+      "learning_about_dreams": "explain_character_goal", 
+      "showing_compatibility": "align_with_crew_dream",
+      "final_decision": "join_or_decline",
+      "conditions": "set_recruitment_requirements"
+    },
+    "shop_template": {
+      "greeting": "welcome_to_shop",
+      "browse_items": "show_inventory",
+      "haggle": "negotiate_price",
+      "purchase": "complete_transaction",
+      "farewell": "thank_customer"
+    },
+    "quest_giver_template": {
+      "problem_introduction": "explain_situation",
+      "request_help": "ask_for_assistance", 
+      "explain_rewards": "detail_compensation",
+      "accept_decline": "player_choice",
+      "quest_updates": "progress_feedback"
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "items": {
+    "consumables": {
+      "health_potion": {
+        "id": "health_potion",
+        "name": "Health Potion",
+        "description": "A basic healing potion that restores 100 HP.",
+        "type": 0,
+        "rarity": 0,
+        "value": 50,
+        "stackSize": 99,
+        "iconTexture": "assets/textures/items/health_potion.png",
+        "consumable": true,
+        "effects": {
+          "heal": 100
+        }
+      },
+      "energy_drink": {
+        "id": "energy_drink",
+        "name": "Energy Drink",
+        "description": "Restores stamina and devil fruit power.",
+        "type": 0,
+        "rarity": 0,
+        "value": 30,
+        "stackSize": 99,
+        "iconTexture": "assets/textures/items/energy_drink.png",
+        "consumable": true,
+        "effects": {
+          "restoreStamina": 50,
+          "restoreDevilFruitPower": 25
+        }
+      },
+      "meat_special": {
+        "id": "meat_special",
+        "name": "Meat Special",
+        "description": "Luffy's favorite! Fully restores HP and provides temporary strength boost.",
+        "type": 0,
+        "rarity": 2,
+        "value": 200,
+        "stackSize": 10,
+        "iconTexture": "assets/textures/items/meat_special.png",
+        "consumable": true,
+        "effects": {
+          "healFull": true,
+          "temporaryStats": {
+            "attack": 20,
+            "duration": 300
+          }
+        }
+      },
+      "seafood_curry": {
+        "id": "seafood_curry",
+        "name": "Seafood Curry",
+        "description": "Sanji's signature dish. Restores HP and boosts speed temporarily.",
+        "type": 0,
+        "rarity": 1,
+        "value": 150,
+        "stackSize": 5,
+        "iconTexture": "assets/textures/items/seafood_curry.png",
+        "consumable": true,
+        "effects": {
+          "heal": 200,
+          "temporaryStats": {
+            "speed": 15,
+            "duration": 600
+          }
+        }
+      },
+      "devil_fruit_awakening_serum": {
+        "id": "devil_fruit_awakening_serum",
+        "name": "Devil Fruit Awakening Serum",
+        "description": "A rare serum that can help awaken Devil Fruit powers. Use with extreme caution.",
+        "type": 0,
+        "rarity": 4,
+        "value": 10000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/awakening_serum.png",
+        "consumable": true,
+        "effects": {
+          "awakenDevilFruit": true
+        }
+      }
+    },
+    "weapons": {
+      "basic_sword": {
+        "id": "basic_sword",
+        "name": "Basic Sword",
+        "description": "A simple iron sword. Nothing special, but gets the job done.",
+        "type": 1,
+        "rarity": 0,
+        "value": 100,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/basic_sword.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 15,
+          "accuracy": 5
+        }
+      },
+      "katana": {
+        "id": "katana",
+        "name": "Katana",
+        "description": "A well-crafted katana with a sharp edge and balanced weight.",
+        "type": 1,
+        "rarity": 1,
+        "value": 500,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/katana.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 35,
+          "accuracy": 10,
+          "criticalChance": 5
+        }
+      },
+      "sandai_kitetsu": {
+        "id": "sandai_kitetsu",
+        "name": "Sandai Kitetsu",
+        "description": "One of the cursed swords. Grants great power but brings misfortune to its wielder.",
+        "type": 1,
+        "rarity": 3,
+        "value": 2000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/sandai_kitetsu.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 75,
+          "accuracy": 20,
+          "criticalChance": 15,
+          "luck": -10
+        },
+        "specialEffects": [
+          "cursed_blade",
+          "demon_aura"
+        ]
+      },
+      "yubashiri": {
+        "id": "yubashiri",
+        "name": "Yubashiri",
+        "description": "A skillfully forged blade, light as a feather and sharp as a razor.",
+        "type": 1,
+        "rarity": 2,
+        "value": 1500,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/yubashiri.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 55,
+          "accuracy": 25,
+          "speed": 10
+        }
+      },
+      "wado_ichimonji": {
+        "id": "wado_ichimonji",
+        "name": "Wado Ichimonji",
+        "description": "Zoro's treasured sword, inherited from his childhood friend Kuina.",
+        "type": 1,
+        "rarity": 3,
+        "value": 5000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/wado_ichimonji.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 85,
+          "accuracy": 30,
+          "criticalChance": 20
+        },
+        "specialEffects": [
+          "inherited_will",
+          "perfect_balance"
+        ]
+      },
+      "marine_rifle": {
+        "id": "marine_rifle",
+        "name": "Marine Rifle",
+        "description": "Standard issue rifle used by Marine soldiers.",
+        "type": 1,
+        "rarity": 0,
+        "value": 200,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/marine_rifle.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 25,
+          "accuracy": 15,
+          "range": 20
+        }
+      },
+      "captain_axe": {
+        "id": "captain_axe",
+        "name": "Captain's Axe",
+        "description": "A heavy battle axe once wielded by Captain Morgan.",
+        "type": 1,
+        "rarity": 2,
+        "value": 800,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/captain_axe.png",
+        "equipSlot": "weapon",
+        "statBonuses": {
+          "attack": 65,
+          "defense": 10,
+          "speed": -5
+        }
+      }
+    },
+    "armor": {
+      "leather_armor": {
+        "id": "leather_armor",
+        "name": "Leather Armor",
+        "description": "Basic leather armor that provides minimal protection.",
+        "type": 2,
+        "rarity": 0,
+        "value": 150,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/leather_armor.png",
+        "equipSlot": "chest",
+        "statBonuses": {
+          "defense": 10,
+          "health": 50
+        }
+      },
+      "marine_coat": {
+        "id": "marine_coat",
+        "name": "Marine Coat",
+        "description": "Official Marine uniform coat. Provides decent protection and authority.",
+        "type": 2,
+        "rarity": 1,
+        "value": 400,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/marine_coat.png",
+        "equipSlot": "chest",
+        "statBonuses": {
+          "defense": 25,
+          "health": 100,
+          "reputation": 5
+        }
+      },
+      "pirate_captain_coat": {
+        "id": "pirate_captain_coat",
+        "name": "Pirate Captain's Coat",
+        "description": "A stylish coat worn by successful pirate captains.",
+        "type": 2,
+        "rarity": 2,
+        "value": 1000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/captain_coat.png",
+        "equipSlot": "chest",
+        "statBonuses": {
+          "defense": 35,
+          "health": 150,
+          "charisma": 15,
+          "leadership": 10
+        }
+      },
+      "straw_hat": {
+        "id": "straw_hat",
+        "name": "Straw Hat",
+        "description": "Luffy's iconic straw hat, passed down from Shanks. A symbol of dreams and adventure.",
+        "type": 2,
+        "rarity": 4,
+        "value": 1,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/straw_hat.png",
+        "equipSlot": "head",
+        "statBonuses": {
+          "luck": 25,
+          "charisma": 30,
+          "willpower": 50
+        },
+        "specialEffects": [
+          "inherited_will",
+          "dream_power",
+          "never_give_up"
+        ]
+      }
+    },
+    "accessories": {
+      "power_ring": {
+        "id": "power_ring",
+        "name": "Power Ring",
+        "description": "A ring that enhances the wearer's physical strength.",
+        "type": 3,
+        "rarity": 1,
+        "value": 300,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/power_ring.png",
+        "equipSlot": "ring",
+        "statBonuses": {
+          "attack": 10,
+          "strength": 5
+        }
+      },
+      "speed_boots": {
+        "id": "speed_boots",
+        "name": "Speed Boots",
+        "description": "Lightweight boots that increase movement speed.",
+        "type": 3,
+        "rarity": 1,
+        "value": 400,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/speed_boots.png",
+        "equipSlot": "feet",
+        "statBonuses": {
+          "speed": 15,
+          "agility": 10
+        }
+      },
+      "lucky_charm": {
+        "id": "lucky_charm",
+        "name": "Lucky Charm",
+        "description": "A mysterious charm that brings good fortune to its owner.",
+        "type": 3,
+        "rarity": 2,
+        "value": 800,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/lucky_charm.png",
+        "equipSlot": "accessory",
+        "statBonuses": {
+          "luck": 20,
+          "criticalChance": 10,
+          "dropRate": 15
+        }
+      }
+    },
+    "key_items": {
+      "road_poneglyph": {
+        "id": "road_poneglyph",
+        "name": "Road Poneglyph",
+        "description": "An ancient stone tablet that reveals the location of Laugh Tale. Four are needed to find the One Piece.",
+        "type": 4,
+        "rarity": 4,
+        "value": 0,
+        "stackSize": 4,
+        "iconTexture": "assets/textures/items/road_poneglyph.png",
+        "consumable": false,
+        "keyItem": true
+      },
+      "eternal_pose": {
+        "id": "eternal_pose",
+        "name": "Eternal Pose",
+        "description": "A compass that always points to a specific island, unaffected by magnetic interference.",
+        "type": 4,
+        "rarity": 2,
+        "value": 1000,
+        "stackSize": 10,
+        "iconTexture": "assets/textures/items/eternal_pose.png",
+        "consumable": false,
+        "keyItem": true
+      },
+      "vivre_card": {
+        "id": "vivre_card",
+        "name": "Vivre Card",
+        "description": "A piece of paper made from a person's fingernail that points toward its owner.",
+        "type": 4,
+        "rarity": 1,
+        "value": 500,
+        "stackSize": 99,
+        "iconTexture": "assets/textures/items/vivre_card.png",
+        "consumable": false,
+        "keyItem": true
+      },
+      "den_den_mushi": {
+        "id": "den_den_mushi",
+        "name": "Den Den Mushi",
+        "description": "A telepathic snail used for long-distance communication.",
+        "type": 4,
+        "rarity": 1,
+        "value": 2000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/den_den_mushi.png",
+        "consumable": false,
+        "keyItem": true,
+        "specialEffects": [
+          "communication"
+        ]
+      }
+    },
+    "treasures": {
+      "gold_coin": {
+        "id": "gold_coin",
+        "name": "Gold Coin",
+        "description": "A valuable gold coin from an ancient civilization.",
+        "type": 5,
+        "rarity": 2,
+        "value": 1000,
+        "stackSize": 999,
+        "iconTexture": "assets/textures/items/gold_coin.png"
+      },
+      "jeweled_crown": {
+        "id": "jeweled_crown",
+        "name": "Jeweled Crown",
+        "description": "An ornate crown encrusted with precious gems.",
+        "type": 5,
+        "rarity": 3,
+        "value": 5000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/jeweled_crown.png"
+      },
+      "ancient_artifact": {
+        "id": "ancient_artifact",
+        "name": "Ancient Artifact",
+        "description": "A mysterious artifact from the Void Century.",
+        "type": 5,
+        "rarity": 4,
+        "value": 50000,
+        "stackSize": 1,
+        "iconTexture": "assets/textures/items/ancient_artifact.png"
+      }
+    },
+    "materials": {
+      "sea_salt": {
+        "id": "sea_salt",
+        "name": "Sea Salt",
+        "description": "High-quality salt extracted from the Grand Line waters.",
+        "type": 6,
+        "rarity": 0,
+        "value": 10,
+        "stackSize": 999,
+        "iconTexture": "assets/textures/items/sea_salt.png"
+      },
+      "steel_ingot": {
+        "id": "steel_ingot",
+        "name": "Steel Ingot",
+        "description": "A bar of refined steel, useful for weapon crafting.",
+        "type": 6,
+        "rarity": 1,
+        "value": 100,
+        "stackSize": 99,
+        "iconTexture": "assets/textures/items/steel_ingot.png"
+      },
+      "wapol_metal": {
+        "id": "wapol_metal",
+        "name": "Wapol Metal",
+        "description": "An incredibly strong and versatile metal created by Wapol's abilities.",
+        "type": 6,
+        "rarity": 3,
+        "value": 5000,
+        "stackSize": 10,
+        "iconTexture": "assets/textures/items/wapol_metal.png"
+      },
+      "seastone": {
+        "id": "seastone",
+        "name": "Seastone",
+        "description": "A rare mineral that negates Devil Fruit powers and is as hard as diamond.",
+        "type": 6,
+        "rarity": 4,
+        "value": 10000,
+        "stackSize": 5,
+        "iconTexture": "assets/textures/items/seastone.png",
+        "specialEffects": [
+          "devil_fruit_nullification",
+          "extreme_hardness"
+        ]
+      }
+    }
+  },
+  "item_sets": {
+    "zoro_swords": {
+      "name": "Three Sword Style Set",
+      "description": "Complete set of Zoro's three swords",
+      "items": ["wado_ichimonji", "sandai_kitetsu", "yubashiri"],
+      "setBonuses": {
+        "2_piece": {
+          "attack": 20,
+          "accuracy": 15
+        },
+        "3_piece": {
+          "attack": 50,
+          "accuracy": 30,
+          "criticalChance": 25,
+          "specialAbility": "three_sword_style_ougi"
+        }
+      }
+    },
+    "marine_officer": {
+      "name": "Marine Officer Set",
+      "description": "Official Marine officer equipment",
+      "items": ["marine_coat", "marine_rifle", "marine_boots"],
+      "setBonuses": {
+        "2_piece": {
+          "defense": 15,
+          "reputation": 10
+        },
+        "3_piece": {
+          "defense": 30,
+          "reputation": 25,
+          "authority": 20,
+          "specialAbility": "marine_justice"
+        }
+      }
+    }
+  },
+  "shop_inventories": {
+    "village_general_store": [
+      "health_potion",
+      "energy_drink", 
+      "basic_sword",
+      "leather_armor"
+    ],
+    "shells_town_weapons": [
+      "katana",
+      "marine_rifle",
+      "leather_armor",
+      "marine_coat"
+    ],
+    "loguetown_weapons": [
+      "sandai_kitetsu",
+      "yubashiri",
+      "quality_katana",
+      "steel_ingot"
+    ],
+    "baratie_kitchen": [
+      "seafood_curry",
+      "meat_special",
+      "energy_drink",
+      "sea_salt"
+    ]
+  }
+}
