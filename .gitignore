@@ -1,0 +1,32 @@
+# Build directories
+build/
+cmake-build-*/
+
+# Downloaded libraries
+libs/SFML/
+libs/spdlog/
+libs/imgui/
+# Keep these small files
+#libs/nlohmann/
+#libs/stb/
+
+# Logs directory
+logs/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.creator
+*.user
+
+# Compiled output
+OnePieceGame
+*.o
+*.so
+*.a
+*.so.*
+
+# OS files
+.DS_Store
+*~
