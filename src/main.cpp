@@ -1,26 +1,14 @@
-#include <SFML/Graphics.hpp>
+#include "scenes/MainMenuScene.h"
+#include <iostream>
 
 int main() {
-    // Create a window (1280x720 with titlebar + close button)
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML Test Window");
-
-    // Limit framerate
-    window.setFramerateLimit(60);
-
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        // Fill background
-        window.clear(sf::Color::Black);
-
-        // (optional: draw stuff here)
-
-        window.display();
+    try {
+        MainMenuScene mainMenu;
+        mainMenu.run();
+    } catch (const std::exception& e) {
+        std::cout << "Error: " << e.what() << std::endl;
+        return -1;
     }
-
+    
     return 0;
 }
